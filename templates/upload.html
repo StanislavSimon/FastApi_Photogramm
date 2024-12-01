@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <style>
+        body {
+            background-color: #ffccff; /* Розовый фон */
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование по горизонтали */
+            justify-content: center; /* Центрирование по вертикали */
+            height: 100vh; /* Высота на весь экран */
+            margin: 0;
+        }
+        h1 {
+            color: #5c2e91; /* Цвет заголовка */
+        }
+        form {
+            background-color: #ffffff; /* Белый фон для формы */
+            padding: 20px;
+            border-radius: 10px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+        }
+        input[type="file"] {
+            margin: 10px 0; /* Отступы */
+        }
+        button {
+            background-color: #5c2e91; /* Цвет кнопки */
+            color: white; /* Цвет текста на кнопке */
+            padding: 10px;
+            border: none;
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Курсор при наведении */
+            font-size: 16px; /* Размер шрифта */
+            transition: background-color 0.3s; /* Плавный переход */
+        }
+        button:hover {
+            background-color: #7a4eab; /* Цвет кнопки при наведении */
+        }
+        a {
+            margin: 10px; /* Отступы между ссылками */
+            text-decoration: none; /* Убираем подчеркивание */
+            color: #5c2e91; /* Цвет ссылки */
+            font-size: 18px; /* Размер шрифта */
+            transition: color 0.3s; /* Плавный переход цвета */
+        }
+        a:hover {
+            color: #7a4eab; /* Цвет ссылки при наведении */
+        }
+    </style>
+</head>
+<body>
+    <h1>Загрузка изображений</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Загрузить</button>
+    </form>
+    <a href="/index">На главную</a>
+</body>
+</html>

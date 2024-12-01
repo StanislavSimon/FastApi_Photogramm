@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #ffccff; /* Розовый фон */
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            justify-content: center; /* Центрирование по вертикали */
+            align-items: center; /* Центрирование по горизонтали */
+            height: 100vh; /* Высота на весь экран */
+            margin: 0;
+        }
+        h1 {
+            color: #5c2e91; /* Цвет заголовка */
+            margin-bottom: 20px; /* Отступ снизу для разделения с формой */
+        }
+        form {
+            background-color: #ffffff; /* Белый фон для формы */
+            padding: 20px;
+            border-radius: 10px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd; /* Цвет границы */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 16px; /* Размер шрифта */
+        }
+        button {
+            background-color: #5c2e91; /* Цвет кнопки */
+            color: white; /* Цвет текста на кнопке */
+            padding: 10px;
+            border: none;
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Курсор при наведении */
+            font-size: 16px; /* Размер шрифта */
+            transition: background-color 0.3s; /* Плавный переход */
+        }
+        button:hover {
+            background-color: #7a4eab; /* Цвет кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+    <h1>Вход</h1>
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Войти</button>
+    </form>
+</body>
+</html>

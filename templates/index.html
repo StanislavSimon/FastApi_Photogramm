@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        body {
+            background-color: #ffccff; /* Розовый фон */
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование по горизонтали */
+            justify-content: center; /* Центрирование по вертикали */
+            height: 100vh; /* Высота на весь экран */
+            margin: 0;
+            padding: 20px; /* Отступы */
+        }
+        h1 {
+            color: #5c2e91; /* Цвет заголовка */
+            font-size: 72px; /* Увеличенный размер шрифта (в 3 раза) */
+        }
+        .image-container {
+            display: flex; /* Используем flexbox для размещения изображений */
+            flex-wrap: wrap; /* Позволяет переносить изображения на новую строку */
+            justify-content: center; /* Центрирование изображений */
+        }
+        img {
+            max-width: 250px; /* Увеличенная максимальная ширина изображения */
+            margin: 10px; /* Отступы между изображениями */
+            border-radius: 5px; /* Закругленные углы изображений */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для изображений */
+        }
+        .button {
+            background-color: #5c2e91; /* Цвет кнопки */
+            color: white; /* Цвет текста на кнопке */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы кнопки */
+            cursor: pointer; /* Курсор при наведении */
+            font-size: 18px; /* Размер шрифта */
+            text-decoration: none; /* Убираем подчеркивание */
+            transition: background-color 0.3s; /* Плавный переход */
+            margin: 10px; /* Отступы между кнопками */
+        }
+        .button:hover {
+            background-color: #7a4eab; /* Цвет кнопки при наведении */
+        }
+        p {
+            color: #5c2e91; /* Цвет текста для сообщения об отсутствии файлов */
+        }
+    </style>
+</head>
+<body>
+    <h1>Фотограмм</h1>
+    <div class="image-container">
+        {% if uploaded_files %}
+            {% for file in uploaded_files %}
+                <img src="/uploads/{{ file }}" alt="{{ file }}">
+            {% endfor %}
+        {% else %}
+            <p>Нет загруженных изображений</p>
+        {% endif %}
+    </div>
+    <br>
+    <a href="/upload" class="button">Загрузить изображение</a>
+    <a href="/index"><p><u>Назад к регистрации</u></p></a>
+</body>
+</html>

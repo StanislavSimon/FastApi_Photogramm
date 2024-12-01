@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: #ffccff; /* Розовый фон */
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            display: flex;
+            flex-direction: column; /* Вертикальное размещение элементов */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Высота на весь экран */
+            margin: 0;
+        }
+        h1 {
+            color: #5c2e91; /* Цвет заголовка */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+        .welcome-message {
+            text-align: center; /* Центрирование текста */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+        form {
+            background-color: #ffffff; /* Белый фон для формы */
+            padding: 20px;
+            border-radius: 10px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            width: 300px; /* Ширина формы */
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd; /* Цвет границы */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 16px; /* Размер шрифта */
+        }
+        button {
+            background-color: #5c2e91; /* Цвет кнопки */
+            color: white; /* Цвет текста на кнопке */
+            padding: 10px;
+            border: none;
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Курсор при наведении */
+            font-size: 16px; /* Размер шрифта */
+            transition: background-color 0.3s; /* Плавный переход */
+            width: 100%; /* Ширина кнопки */
+        }
+        button:hover {
+            background-color: #7a4eab; /* Цвет кнопки при наведении */
+        }
+        .link {
+            margin-top: 10px; /* Отступ сверху */
+            text-align: center; /* Центрирование текста */
+        }
+        a {
+            color: #5c2e91; /* Цвет ссылки */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 16px; /* Размер шрифта */
+            transition: color 0.3s; /* Плавный переход цвета */
+        }
+        a:hover {
+            color: #7a4eab; /* Цвет ссылки при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">
+        <h1>Добро пожаловать в Фотограмм</h1>
+        <p>Регистрация</p>
+    </div>
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    <div class="link">
+        <a href="/login">Уже зарегистрированы? <p><u>Войти</u></p></a>
+    </div>
+</body>
+</html>
